@@ -17,7 +17,7 @@ public class Practice03 {
 		z = ++x + ++y;									9	x4 y5 z9	
 		System.out.println("x="+x + " y="+y);			9	x4 y5 z9		
 		z--;											8   x4 y5 z8		
-		x += --y;										8	x4 y4 z8		
+		x += --y;												
 		System.out.println("x="+x + " y="+y + " z="+z);	16  x4 y4 z8		
 		x = 10;
 		z = x/y++; 										2	x10 y5 z2
@@ -49,6 +49,8 @@ public class Practice03 {
 		 */
 		int menuPrice = 5000; //점심 식사 메뉴 가격 (임의로 변경해가면서 테스트)
 		String result = (menuPrice > 12000) ? "물로배채우기" : (menuPrice > 8000 ? "눈물": (menuPrice > 6000 ? "선방" : "훌륭")) ;
+		
+		//result = (menuPrice >8000 ? (menuPrice > 12000 ? "물로배채우기" :"눈물") : (menuPrice > 6000 ? "선방" : "훌륭"));
 		System.out.println(result);
 
 	}
