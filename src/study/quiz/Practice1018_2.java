@@ -46,7 +46,7 @@ public class Practice1018_2 {
 				System.out.println("잘못입력했습니다.");
 			}
 		}
-		
+		int diceNum = 1;
 		if (diceNum == 1) {
 			System.out.println("1");
 		} else if (diceNum == 2) {
