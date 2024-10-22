@@ -1,5 +1,7 @@
 package study.book;
 
+import java.util.Scanner;
+
 public class ch02 {
 
 	public static void main(String[] args) {
@@ -49,6 +51,38 @@ public class ch02 {
 		System.out.println(c3);
 		System.out.println(c4);
 		
+		
+		for(int m=2; m<=9; m++) {
+			System.out.println("*** " + m+ "단 ***");
+			for(int n=1; n<=9; n++) {
+				System.out.println(m+" x "+n +" = "+(m*n));
+			}
+		}
+		
+		Scanner scanner = new Scanner(System.in);
+		boolean run =true;
+		int speed = 0;
+		
+		while(run) {
+			System.out.println("-------------------------");
+			System.out.println("1. 증속 | 2. 감속 | 3. 중지");
+			System.out.println("-------------------------");
+			System.out.print("선택:");
+			
+			String strNum =scanner.nextLine();
+			
+			if(strNum.equals("1")) {
+				speed++;
+				System.out.println("현재속도 = "+ speed);
+			} else if(strNum.equals("2")) {
+				speed--;
+				System.out.println("현재속도 = "+ speed);
+			} else if(strNum.equals("3")) {
+				run = false;
+			}
+		}
+		
+		System.out.println("프로그램 종료");
 
 	}
 
