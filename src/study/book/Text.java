@@ -1,15 +1,15 @@
-package quiz;
+package study.book;
 
-public class Quiz1024 {
+public class Text {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
 		for(int i=1; i<=3; i++) {
 			for(int j=1; j<=3; j++)
-				System.out.println(j);
+				System.out.print(j);
 			System.out.println();
 		}
+
 	}
 
 }

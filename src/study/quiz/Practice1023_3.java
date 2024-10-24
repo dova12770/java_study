@@ -76,7 +76,34 @@ public class Practice1023_3 {
 				beta = beta + gamma;
 			}
 		}System.out.println(gamma+"번째, 총합: "+ beta);
+		
+		int total =0;
+		int i;
+		for(i=1; total<100; i++) {
 			
+			if(i%2 ==0) {
+				total = total - i;
+			} else {
+				total = total + i;
+			}
+		}
+		System.out.println("누적합 : " + total + "얼마까지 계산했는가? :" +(i-1));
+		
+		total =0;
+		i=1;
+		while(true) {
+			if(i%2 ==0) {
+				total = total - i;
+			} else {
+				total = total + i;
+			}
+
+			if(total >=100) {
+				break;
+			}
+			i++;
+		}
+		System.out.println("누적합 : " + total + "얼마까지 계산했는가? :" +i);	
 		
 	}
 

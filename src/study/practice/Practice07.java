@@ -6,105 +6,78 @@ public class Practice07 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		/*
-			1.
-			+자연수 (정수) 5개의 수를 차례대로 입력 받는다.
-			몇번째 수인가요? : 그에 해당하는 수를 출력
-			ex) 10 20 30 50 90
-			몇번째 수인가요? 5
-			결과 : 90
-		 */
-		/*
+/*
+		* 윤년이란?
+		지구가 태양을 한 번 공전하는 데 걸리는 시간을 일 년으로 두었는데,
+		사실은 그 시간이 365일이 아닌 365일 5시간 49분 가량이다.
+		일 년에 5시간 49분씩 4 년이 지나면 약 하루가 되는데,
+		이를 맞추기 위해 4 년마다 한 번씩 2월을 하루 늘리고 이를 윤년이라 한다.
+		단, 이렇게 계산하게 되면 매년 11분 가량이 초과되어 계산된다.
+		이는 131년이 지나면 하루(대략 400년에 3일)가 되기 때문에 대부분의 국가에서 반영하는
+		그레고리력에서는 400년에 3일을 제외시키기 위해 100년마다 한 번 윤년을 없애고
+		400년 마다 다시 하루를 추가해 윤년을 둔다. 정리하면 다음과 같은 방법으로 윤년을 계산할 수 있다.
+	
+		☞ 연도가 4로 나누어 떨어지면 윤년이다. ex) 2020년, 2024년, 2028년, ...
+		☞ 연도가 100으로 나누어 떨어지면 윤년이 아니다. ex) 2100년, 2200년, 2300년, ...
+		☞ 연도가 400으로 나누어 떨어지면 윤년이다. ex) 2000년, 2400년, 2800년, ...
+	
+		예를 들면 2000년은 100의 배수이지만 400으로 나누어 떨어지기 때문에 윤년이다.
+		
+		100 200 300 400
+		X	X	X	O
+	
+		년도를 입력받아서 윤년인지 아닌지의 여부를 출력하세요.
+		
+		우선순위 	4 < 100<	400
+		2000	O	O		O
+		2100	O	O		X
+		2024	O	X		X		
+	*/
 		Scanner scanner = new Scanner(System.in);
+		System.out.print("년도 입력 : ");
+		int year = scanner.nextInt();
 		
-		int[] numArr = new int[5];
-		
-		System.out.print("5개 정수를 입력하세요 :");
-		
-		for(int i=0; i<numArr.length; i++) {
-			//i: 0 1 2 3 4
-			numArr[i] = scanner.nextInt();
+		if(year%400 == 0) {
+			System.out.println("윤년 O");
+		} else if (year%100 == 0) {
+			System.out.println("윤년 X");
+		} else if (year%4 == 0) {
+			System.out.println("윤년 O");
+		} else {
+			System.out.println("윤년 X");
 		}
 		
-		System.out.print("몇번째 수인가요? :");
-		int index = scanner.nextInt();
-		System.out.println("결과 :" + numArr[index-1]);
-		
-		// 인덱스	: 0 1 2 3 4
-		// 순번	: 1 2 3 4 5
-		*/
-		/* 
-		numArr[0] = scanner.nextInt();
-		numArr[1] = scanner.nextInt();
-		numArr[2] = scanner.nextInt();
-		numArr[3] = scanner.nextInt();
-		numArr[4] = scanner.nextInt();
-		*/
-		/*
-			2.
-			+자연수 (정수) 5개의 수를 차례대로 입력 받는다.
-			받은후에 순서를 거꾸로 출력하세요.
-			ex) 1 2 3 4 5
-			결과 : 5 4 3 2 1
-		*/
-		
-		/*
-		Scanner scanner = new Scanner(System.in);
-		
-		int[] numArr = new int[5];
-		
-		
-		System.out.print("5개 정수를 입력하세요 :");
-		for(int i=0; i<numArr.length; i++) {
-			numArr[i] = scanner.nextInt();
-		}
-		
-		System.out.println("결과 :");
-		for(int i=4; i>=0; i--) {
-			System.out.print(numArr[i] + " ");
-		}
-		
-		System.out.print("5개 정수를 입력하세요 :");
-		
-		for(int i=4; i>=0; i--) {
-			System.out.print(numArr[i] + " ");
-		}
-		System.out.println("결과 :");
-		for(int i=0; i<numArr.length; i++) {
-			numArr[i] = scanner.nextInt();
-		}*/
-		
-		
-		/*
-			3. 4x4 배열을 생성하여, 값을 아래와 같이 저장후 출력 하시오.
-			(*반복문을 사용하면 좀 더 편하게 저장이 가능합니다.)
-			1   2   3   4
-			5   6   7   8
-			9  10 11 12
-			13 14 15 16
-		*/
-		//int[][] nArr = {{1,2,3,4},{5,6,7,8},{9,10,11,12},{13,14,15,16}};
-		int[][] nArr = new int [4][4];
-		int num = 1;
-		for(int i=0; i<4; i++) {
-			for(int j=0; j<4; j++) {
-				nArr[i][j] = num;
-				num = num +1;
+		if(year%4 == 0) {
+			if(year%400 == 0) {
+				System.out.println("윤년 O");
+			} else {
+				if(year%100 == 0) {
+					System.out.println("윤년 X");
+				} else {
+					System.out.println("윤년 O");
+				}
 			}
+		} else {
+			System.out.println("윤년 X");
 		}
 		
-		// i: 0 1 2 3
-		// j: 0 1 2 3
 		
-		for(int i=0; i<4; i++) {
-			
-			for(int j=0; j<4; j++) {
-				//System.out.print(nArr[i][j] + " ");
-				System.out.printf("%3d",nArr[i][j]);
-			}
-			System.out.println();
+		//if( year%400 == 0 || ( year%4==0 && year%100!=0 ) ) {
+		if( year%400 == 0 || ( year%4==0 && !(year%100==0) ) ) {			
+			System.out.println("윤년 O");
+		} else {
+			System.out.println("윤년 X");
 		}
 		
 	}
 
 }
+
+
+
+
+
+
+
+
+

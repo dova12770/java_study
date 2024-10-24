@@ -6,151 +6,171 @@ public class Practice09 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
-		//연습문제 - 1
+
 		/*
-		1. 정수를 입력받고 홀수면 "odd"를 출력, 짝수면 "even"을 출력하기.
+			1.
+			+자연수 (정수) 5개의 수를 차례대로 입력 받는다.
+			몇번째 수인가요? : 그에 해당하는 수를 출력
+			ex) 10 20 30 50 90
+			몇번째 수인가요? 5
+			결과 : 90
 		*/
 		
-		Scanner scanner =new Scanner(System.in);
+		/*
+		Scanner scanner = new Scanner(System.in);
 		
-		System.out.println("정수 입력하세요 : ");
-		int num = scanner.nextInt();
+		int[] numArr = new int[5];
 		
-		if(num%2 ==0) {
-			System.out.println("even");
-		} else {
-			System.out.println("odd");
+		System.out.print("5개 정수를 입력하세요 : ");
+		//					5
+		for(int i=0; i<numArr.length; i++) {
+			//i: 0 1 2 3 4
+			numArr[i] = scanner.nextInt();
 		}
 		
-		switch(num%2) {
-		case 0:
-			System.out.println("even");
-			break;
+		System.out.print("몇번째 수인가요? : ");
+		int index = scanner.nextInt();
+		System.out.println("결과 : " + numArr[index-1]);
+		*/
+		
+		// 인덱스 : 0 1 2 3 4
+		// 순번  : 1 2 3 4 5 
+		
+		
+//		numArr[0] = scanner.nextInt();
+//		numArr[1] = scanner.nextInt();
+//		numArr[2] = scanner.nextInt();
+//		numArr[3] = scanner.nextInt();
+//		numArr[4] = scanner.nextInt();
+		
+		
+		
+		/* 배열 없이 사용 case
+		int n1 = scanner.nextInt();
+		int n2 = scanner.nextInt();
+		int n3 = scanner.nextInt();
+		int n4 = scanner.nextInt();
+		int n5 = scanner.nextInt();
+		
+		System.out.print("몇번째 수인가요? : ");
+		int index = scanner.nextInt();
+		
+		if(index == 1)
+			System.out.println("결과 " + n1);	
+		else if(index == 2)
+			System.out.println("결과 " + n2);
+		
+		switch(index) {
 		case 1:
-			System.out.println("odd");
+			System.out.println("결과 " + n1);	
+			break;
+		case 2:
+			System.out.println("결과 " + n2);
 			break;
 		}
-		
-		System.out.println(num%2 ==0 ? "even" : "odd");
-		
-		/*
-		2. 정수를 입력받고 7의 배수면 "7의 배수입니다" 출력, 아니면 "아닙니다" 출력하기.
 		*/
 		
-		System.out.println("정수를 입력 : ");
-		int num1 = scanner.nextInt();
-		if(num1 % 7 == 0) {
-			System.out.println("7의 배수입니다.");
-		} else {
-			System.out.println("아닙니다.");
-		}
-		System.out.println();
+		
+		
 		
 		/*
-		3. 1~1000 까지의 수 중에서 5의 배수의 합을 출력하기.
+			2.
+			+자연수 (정수) 5개의 수를 차례대로 입력 받는다.
+			받은후에 순서를 거꾸로 출력하세요.
+			ex) 1 2 3 4 5
+			결과 : 5 4 3 2 1
 		*/
 		
-		int sum = 0;
-		for(int i=1; i<=1000;i++) {
-			if(i % 5 ==0) {
-				sum = sum+i;
-			}
-		}
-		System.out.println(sum);
-		
-		sum=0;
-		for(int i=1; i<=1000;i=i+5) {
-			if(i % 5 ==0) {
-				sum = sum+i;
-			}
-		}
-		System.out.println(sum);
 		
 		/*
-		4. 1~50 까지의 수를 입력받아 해당 갯수만큼 *을 출력하기.
-		ex) 입력 : 10
-		결과 : **********
+		Scanner scanner = new Scanner(System.in);
+		
+		int[] numArr = new int[5];
+		
+		
+		
+		System.out.print("5개 정수를 입력하세요 : ");
+		for(int i=0; i<numArr.length; i++) {
+			numArr[i] = scanner.nextInt();
+		}
+		
+		//i: 4 3 2 1 0
+		System.out.print("결과 : ");
+		for(int i=4; i>=0; i--) {
+			System.out.print(numArr[i] + " ");
+		}
+		System.out.print("5개 정수를 입력하세요 : ");
+		//for(int i=4; i>=0; i--) {
+		for(int i=numArr.length-1  ; i>=0; i--) {
+			numArr[i] = scanner.nextInt();
+			// 4 3 2 1 0 
+		}
+		
+		System.out.print("결과 : ");
+		for(int i=0; i<numArr.length; i++) {
+			System.out.print(numArr[i] + " ");
+		}
 		*/
 		
-		System.out.println("1~50 정수를 입력하세요 : ");
-		int num2 = scanner.nextInt();
-		
-		
-		for(int i=1; i<num2;i++) {
-			System.out.print("*");
-		}
 		
 		/*
-		5. 1~10 까지의 수에서 홀수면 더하기(+), 짝수면 빼기(-)를 수행해서 최종 결과 출력.
-		ex) 1 - 2 + 3 - 4 .....
-		*/
-		
-		int result = 0;
-		for(int i=1; i<=10; i++) {
-			
-			if(i%2 == 0) {
-				result =result -1;
-			} else {
-				result = result + 1;
-			}
-		}
-		System.out.println(result);
-		
-		result = 0;
-		for(int i=1; i<=10; i=i+2){
-			result = result +i;
-		}
-		for(int i=2; i<=10; i=i+2){
-			result = result -i;
-		}
-		System.out.println(result);
-		/*
-		6. 정수를 1부터 계속 누적으로 더한다. 이 더한 값이 1000 보다 작으면 계속 더하고
-		1000이 넘어가면 멈춘다. 멈추는 시점까지 누적으로 더해진 값을 출력하기.
+			3. 4x4 배열을 생성하여, 값을 아래와 같이 저장후 출력 하시오.
+			(*반복문을 사용하면 좀 더 편하게 저장이 가능합니다.)
+			1   2   3   4
+			5   6   7   8
+			9  10 11 12
+			13 14 15 16
 		 */
 		
-		int total = 0;
-		/*for(int i=1; total<=1000; i++) {
-			total=total+i;
-		}*/
-		/*
-		int i=1;
-		while(total<1000) {
-			total =total + i;	//1 + 2 + 3
-			i++;//4
-		}
-		System.out.println("누적 값 : " + total);
+		//int[][] nArr = { {1,2,3,4}, {5,6,7,8}, {9,10,11,12}, {13,14,15,16} };
+		int[][] nArr = new int[4][4];
 		
-		total =0;
-		int i=1;
-		while(true) {
-			total =total + i;	
-			i++;//4
-			if(total >= 1000)
-				break;
+		int num = 1;
+		for(int i=0; i<4; i++) {			
+			for(int j=0; j<4; j++) {
+				//i   :0 0 0 0 1 1 1 1 ...
+				//j   :0 1 2 3 0 1 2 3 ...
+				//num :1 2 3 4 5 6 7 8 ...
+				nArr[i][j] = num;
+				num = num + 1;
+			}
 		}
-		System.out.println("누적 값 : " + total);
+		
+		// i: 0 1 2 3 
+		// j: 0 1 2 3
+		
+		// nArr.length
+		for(int i=0; i<4; i++) {			
+			for(int j=0; j<4; j++) {
+				//System.out.print(nArr[i][j] + " ");
+				System.out.printf("%3d", nArr[i][j]);
+			}
+			System.out.println();
+		}
+		
+		/*
+		for(int i=1;i<=16;i=i+4) {
+			//i:1 5 9 13
+			System.out.print(i + " ");
+			for(int j=i+1;j<=i+3;j++) {
+				//i:1	  5     9        13
+				//j:2 3 4 6 7 8 10 11 12 14 15 16
+				System.out.print(j+ " ");
+			}
+			System.out.println();
+		}
 		*/
-		
-		/*
-		7. 입력 받은 수의 구구단 출력 (1~9까지 입력)
-		ex) 입력 3
-		3 * 1 = 3
-		3 * 2 = 6
-		3 * 3 = 9
-		...
-		3 * 9 = 27
-		 */
-		
-		System.out.print("몇단 출력할개? (1~9) : ");
-		int alpha = scanner.nextInt();
-		
-		for(int i=1; i<=9; i++) {
-			System.out.printf("%2d * %2d = %3d\n",alpha, i, alpha*i);
-			//System.out.println(alpha+"*"+i+"="+(alpha*i));
-		}
-		
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
