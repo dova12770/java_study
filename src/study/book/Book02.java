@@ -38,14 +38,25 @@ public class Book02 {
 			System.out.println("================================");
 			System.out.println("1.예금 | 2. 출금 | 3.잔고 | 4.종료");
 			System.out.println("================================");
-		}
+			System.out.print("선택>");
+		
 		String money1 = scanner.nextLine();
-		
 		if(money1.equals("1")) {
+			System.out.print("예금액>");
+			int money2 = scanner.nextInt();
+			money = money + money2;
 			
+		} else if(money1.equals("2")) {
+			System.out.print("출금액>");
+			int money2 = scanner.nextInt();
+			money = money - money2;
+		} else if(money1.equals("3")) {
+			System.out.println("잔고>"+money);
+		} else if(money1.equals("4")) {
+			run=false;
+			System.out.println("프로그램 종료");
+		} 
 		}
-		
-		
 		
 	}
 

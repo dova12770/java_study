@@ -58,7 +58,7 @@ public class ch02 {
 				System.out.println(m+" x "+n +" = "+(m*n));
 			}
 		}
-		
+		/*
 		Scanner scanner = new Scanner(System.in);
 		boolean run =true;
 		int speed = 0;
@@ -81,8 +81,8 @@ public class ch02 {
 				run = false;
 			}
 		}
-		
-		System.out.println("프로그램 종료");
+		*/
+
 
 	}
 
