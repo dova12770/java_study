@@ -8,7 +8,10 @@ public class Practice1024_1 {
 		// TODO Auto-generated method stub
 		Scanner scanner = new Scanner(System.in);
 		int cho;
-		for(int i=0;true;i++) {
+		
+		//for(int i=0;true;i++) 
+		while(true)
+		{
 		System.out.println("1.입력");
 		System.out.println("2.수정");
 		System.out.println("3.조회");
@@ -17,7 +20,6 @@ public class Practice1024_1 {
 		
 		System.out.print("메뉴번호를 입력하세요 : ");
 		cho =scanner.nextInt();
-		
 		
 			if(cho==1) {
 				System.out.println("입력 메뉴입니다.");
