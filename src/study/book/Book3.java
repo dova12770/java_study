@@ -21,7 +21,7 @@ public class Book3 {
 				{83, 92, 96},
 				{78, 83, 93, 87, 88}
 		};
-		for(int =0; Array)
+		for(int i=0; true;i++) {}
 
 	}
 

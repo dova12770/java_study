@@ -5,9 +5,7 @@ import java.util.Scanner;
 public class Practice1025_1 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Scanner scanner= new Scanner(System.in);
-		int sum=0;
 		int ice=0;
 		int cafe=0;
 		int ban=0;
