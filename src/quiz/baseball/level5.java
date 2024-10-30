@@ -2,7 +2,7 @@ package quiz.baseball;
 
 import java.util.Scanner;
 
-public class level4 {
+public class level5 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -22,6 +22,11 @@ public class level4 {
 		int anta=0;		//안타수
 		int peopleIndex=0;//배열인덱스용
 		
+		int home=0;		//홈	
+		int base1=0;	//1루
+		int base2=0;	//2루
+		int base3=0;	//3루
+		
 		while(gamma<4) {
 			System.out.println(gamma+"회차 시작");
 		while(gamma<4){
@@ -37,6 +42,7 @@ public class level4 {
 			
 			player=((int)(Math.random()*100)+1);
 			ball=((int)(Math.random()*100)+1);
+
 			
 			if(player==ball && (player>=player-3||player<=player+3)) {
 				anta++;	//안타
@@ -57,35 +63,42 @@ public class level4 {
 				anta++;
 				hit[peopleIndex]++;
 			}
+			if(anta==1) {
+				base1=1;
+			} else if(anta==2) {
+				base2=1;
+			} else if(anta==3) {
+				base3=1;
+			} else if(anta==4) {
+				home=1;
+			}
 			if(strike==3) {//스트라이크3번이면 아웃카운터상승
 				zeta++;	//아웃카운터
 			}
-			if((strike==3||anta==1)&&zeta==3) {	//스트라이크3번이거나 안타1번이면
-				System.out.println(gamma+"회차종료");
-				peopleIndex++;					//선수교체하면서 안타,볼,스트라이크 초기화
-				anta=0;
-				beta=0;
-				strike=0;
-				gamma++;
-				break;
-			} else if(strike==3||anta==1) {
-				peopleIndex++;					//선수교체하면서 안타,볼,스트라이크 초기화
-				anta=0;
-				beta=0;
-				strike=0;
-				break;
-			}
-
-			/*
 			if(zeta==3) {
 				System.out.println(gamma+"회차종료");
+				peopleIndex++;
+				base1=0;
+				base2=0;
+				base3=0;
 				zeta=0;
+				anta=0;
+				beta=0;
+				strike=0;
 				gamma++;
 				break;
-			}*/
-
+			}
+			if(strike==3||anta==1) {
+				peopleIndex++;					//선수교체하면서 안타,볼,스트라이크 초기화
+				anta=0;
+				beta=0;
+				strike=0;
+				break;
+				}
+			}
 		}
-		}
+		System.out.println("종료. 획득점수 : "+home);
 	}
 	
+
 }

@@ -2,7 +2,7 @@ package quiz.baseball;
 
 import java.util.Scanner;
 
-public class level4 {
+public class Level6 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -11,6 +11,8 @@ public class level4 {
 		String[] people={"A","B","C","D","E","F","G","H","I"};
 		int[] run = new int[9];//타석
 		int[] hit = new int[9];//안타
+		int[] out = new int[9];//아웃
+		int[] ball4= new int[9];//볼넷
 		
 		double avg=0;	//타율
 		int player=0;	//타자 랜덤숫자
@@ -22,6 +24,11 @@ public class level4 {
 		int anta=0;		//안타수
 		int peopleIndex=0;//배열인덱스용
 		
+		int home=0;		//홈	
+		int base1=0;	//1루
+		int base2=0;	//2루
+		int base3=0;	//3루
+		
 		while(gamma<4) {
 			System.out.println(gamma+"회차 시작");
 		while(gamma<4){
@@ -32,11 +39,13 @@ public class level4 {
 				avg=((double)hit[peopleIndex]/(run[peopleIndex]));
 			}
 			System.out.print(people[peopleIndex]+"타자 ");
-			System.out.println("타율 : "+avg+"(안타:"+hit[peopleIndex]+" 타석"+run[peopleIndex]+")");
+			System.out.println("타율 : "+avg+"(안타:"+hit[peopleIndex]+
+					" 타석"+run[peopleIndex]+" 아웃"+out[peopleIndex]+" 볼넷"+ball4[peopleIndex]+")");
 
 			
 			player=((int)(Math.random()*100)+1);
 			ball=((int)(Math.random()*100)+1);
+
 			
 			if(player==ball && (player>=player-3||player<=player+3)) {
 				anta++;	//안타
@@ -56,36 +65,44 @@ public class level4 {
 			if(beta==4) {//볼4면 안타
 				anta++;
 				hit[peopleIndex]++;
+				ball4[peopleIndex]++;
+			}
+			if(anta==1) {
+				base1=1;
+			} else if(anta==2) {
+				base2=1;
+			} else if(anta==3) {
+				base3=1;
+			} else if(anta==4) {
+				home=1;
 			}
 			if(strike==3) {//스트라이크3번이면 아웃카운터상승
 				zeta++;	//아웃카운터
+				out[peopleIndex]++;
 			}
-			if((strike==3||anta==1)&&zeta==3) {	//스트라이크3번이거나 안타1번이면
-				System.out.println(gamma+"회차종료");
-				peopleIndex++;					//선수교체하면서 안타,볼,스트라이크 초기화
-				anta=0;
-				beta=0;
-				strike=0;
-				gamma++;
-				break;
-			} else if(strike==3||anta==1) {
-				peopleIndex++;					//선수교체하면서 안타,볼,스트라이크 초기화
-				anta=0;
-				beta=0;
-				strike=0;
-				break;
-			}
-
-			/*
 			if(zeta==3) {
 				System.out.println(gamma+"회차종료");
+				peopleIndex++;
+				base1=0;
+				base2=0;
+				base3=0;
 				zeta=0;
+				anta=0;
+				beta=0;
+				strike=0;
 				gamma++;
 				break;
-			}*/
-
+			}
+			if(strike==3||anta==1) {
+				peopleIndex++;					//선수교체하면서 안타,볼,스트라이크 초기화
+				anta=0;
+				beta=0;
+				strike=0;
+				break;
+				}
+			}
 		}
-		}
+		System.out.println("종료. 획득점수 : "+home);
 	}
-	
+
 }

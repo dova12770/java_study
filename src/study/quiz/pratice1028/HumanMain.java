@@ -8,6 +8,7 @@ public class HumanMain {
 		Human h1 =new Human("철수","남자",20,170,70,"대학생","A","양호","숙면중");
 		
 		h1.humaninfo();
+		h1.humaninfo();
 	}
 
 }
