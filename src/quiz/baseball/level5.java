@@ -2,7 +2,7 @@ package quiz.baseball;
 
 import java.util.Scanner;
 
-public class level5 {
+public class Level5 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -36,9 +36,9 @@ public class level5 {
 			if(hit[peopleIndex]>0) {
 				avg=((double)hit[peopleIndex]/(run[peopleIndex]));
 			}
-			System.out.print(people[peopleIndex]+"타자 ");
-			System.out.println("타율 : "+avg+"(안타:"+hit[peopleIndex]+" 타석"+run[peopleIndex]+")");
-
+			System.out.print(peopleIndex+1+"번"+people[peopleIndex]+"타자 ");
+			System.out.printf("타율 : %7.2f (안타: %d 타석:%d)\n"
+					,avg,hit[peopleIndex],run[peopleIndex]);
 			
 			player=((int)(Math.random()*100)+1);
 			ball=((int)(Math.random()*100)+1);

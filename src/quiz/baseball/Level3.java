@@ -29,7 +29,7 @@ public class Level3 {
 				continue;
 			}
 			run[peopleIndex]=a;
-			System.out.print(people[peopleIndex]+"타자 ");
+			System.out.print(peopleIndex+1+"번"+people[peopleIndex]+"타자 ");
 			if(run[peopleIndex]>=0) {
 				avg=((double)hit[peopleIndex]/(run[peopleIndex]+1));
 				System.out.printf("타율:"+avg+"("+ hit[peopleIndex]+" "+a+")");
@@ -43,9 +43,9 @@ public class Level3 {
 				System.out.println("안타");	
 				hit[peopleIndex-1]+=anta;
 			} else {
-				beta=beta+1;
+				beta++;
 				alpha=beta;
-				zeta=zeta+1;
+				zeta++;
 				System.out.println(alpha+"아웃");
 			}
 			if(peopleIndex==people.length) {
@@ -59,7 +59,7 @@ public class Level3 {
 				}
 			if(beta==3) {
 				System.out.println(gamma+"회차 끝");
-				gamma=gamma+1;
+				gamma++;
 				beta=0;
 				continue;
 				}

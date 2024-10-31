@@ -22,7 +22,7 @@ public class Level2 {
 				System.out.println("잘못입력하셨습니다.");
 				continue;
 			}
-			System.out.printf(people[peopleIndex]+"타자 ");
+			System.out.printf(peopleIndex+1+"번"+people[peopleIndex]+"타자 ");
 			peopleIndex++;
 			ball=((int)(Math.random()*10)+1);
 			if(player == ball) {
