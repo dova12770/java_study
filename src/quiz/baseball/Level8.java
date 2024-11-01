@@ -13,6 +13,7 @@ public class Level8 {
 		int[] hit = new int[9];//안타
 		int[] out = new int[9];//아웃
 		int[] ball4= new int[9];//볼넷
+		int[] hrArr=new int[9];//홈런
 		
 		boolean bat=false;	//안타시 몇루타인지 확인용
 		boolean hr=false;	//홈런시도
@@ -46,8 +47,8 @@ public class Level8 {
 					avg=((double)hit[peopleIndex]/(run[peopleIndex]));
 				}
 				System.out.print(peopleIndex+1+"번"+people[peopleIndex]+"타자 ");
-				System.out.printf("타율 : %7.2f (안타: %d 타석:%d 볼넷:%d 아웃:%d)\n"
-						,avg,hit[peopleIndex],run[peopleIndex],ball4[peopleIndex],out[peopleIndex]);
+				System.out.printf("타율 : %7.2f (안타: %d 타석:%d 볼넷:%d 아웃:%d 홈런:%d)\n"
+						,avg,hit[peopleIndex],run[peopleIndex],ball4[peopleIndex],out[peopleIndex],hrArr[peopleIndex]);
 				
 				while(gamma<4){
 				player=((int)(Math.random()*100)+1);//타자숫자
@@ -99,6 +100,8 @@ public class Level8 {
 						base2=0;
 						base3=0;
 						hr=false;
+						bat=false;
+						hrArr[peopleIndex]++;
 						System.out.println("***homerun***");
 					}else {hr=false;}
 				}  
