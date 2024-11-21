@@ -1,16 +1,7 @@
 package study.book;
 
-import java.util.Scanner;
+public class Re {
 
-public class memojang {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		/*int a =0;
-		String b= "";
-		b = Integer.valueOf(b);*/
-	}
-	
 }
 class Solution {
     public int solution(int n, String control) {
