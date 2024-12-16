@@ -30,7 +30,7 @@ public class StudentMain {
 		
 		stu1.phone ="12313";
 		stu1.studentNumber = "sodijfo";
-
+		
 	}
 
 }
