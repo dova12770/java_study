@@ -1,5 +1,7 @@
 package study.cls.cls04;
 
+import java.util.Scanner;
+
 public class IPadMain {
 
 	public static void main(String[] args) {
@@ -18,6 +20,15 @@ public class IPadMain {
 		System.out.println(IPad.madeBy);
 		
 		IPad.check();
+		
+		System.out.println(p1.madeBy);	//	IPad.madeBy
+		System.out.println(p2.madeBy);
+		System.out.println(IPad.madeBy);
+		
+		Math.random();
+		Integer.parseInt("134");
+		
+		Scanner scanner =new Scanner(System.in);
 	}
 
 }
