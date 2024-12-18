@@ -1,4 +1,4 @@
-package study.quiz.pratice1028;
+package study.quiz.practice1028;
 
 public class HumanMain {
 
