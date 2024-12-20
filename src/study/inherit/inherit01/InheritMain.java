@@ -19,6 +19,7 @@ public class InheritMain {
 		c2.say();
 		c2.play();
 		System.out.println(c2.grade + c2.schoolName+c2.money);
+		
 	}
 
 }

@@ -4,7 +4,7 @@ public class Child extends Parent {
 	int grade;
 	String schoolName;
 	
-	public Child(int grade, String SchoolName,int money) {
+	public Child(int grade, String SchoolName, int money) {
 		super(money);
 		this.grade =grade;
 		this.schoolName = schoolName;
@@ -26,5 +26,9 @@ public class Child extends Parent {
 	
 	public void play() {
 		System.out.println("뛰어놀기");
+	}
+	
+	public void printInfo() {
+		System.out.println(grade + " "+ schoolName + " "+ money);
 	}
 }
