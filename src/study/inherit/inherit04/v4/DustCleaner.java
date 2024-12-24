@@ -1,4 +1,4 @@
-package study.inherit.inherit04.v3;
+package study.inherit.inherit04.v4;
 
 public class DustCleaner extends Cleaner {
 
