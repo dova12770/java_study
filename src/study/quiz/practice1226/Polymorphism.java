@@ -41,6 +41,7 @@ interface Healer {
 		int inHp=50;
 		// TODO Auto-generated method stub
 		System.out.println("전체 체력 +" +inHp+ " 증가 시킵니다.");
+		hp +=inHp;
 	}
 	/* 3. Healer의 메소드를 오버라이딩하세요. */
 	@Override
@@ -48,5 +49,6 @@ interface Healer {
 		// TODO Auto-generated method stub
 		int healP= 30;
 		System.out.println("체력을 +" + healP + " 회복합니다.");
+		hp += healP;
 	}
 }
