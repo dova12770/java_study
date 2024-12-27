@@ -25,8 +25,8 @@ public class Exp01 {
 			n = Integer.parseInt(s);
 			System.out.println("parseInt 후");
 		} catch (Exception e) {
-			System.out.println(e.getMessage());
-			e.printStackTrace();
+			System.out.println(e.getMessage()); //뭐가 문제였는지?
+			e.printStackTrace();	//오류코드 on
 		} finally {
 			System.out.println("여기 finally");
 		}
