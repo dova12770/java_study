@@ -19,20 +19,20 @@ public class practice1231 {
 		String [] completion1 = {"josipa","filipa","marina","nikola"};
 		String [] completion2 = {"stanko","ana","misiav"};
 
-//		HashMap<String,Integer> maraton = new HashMap<>();
-//		for(String runner : paricipant) maraton.put(runner, maraton.getOrDefault(runner, 0)+1);
-//		for(String runner : paricipant1) maraton.put(runner, maraton.getOrDefault(runner, 0)+1);
-//		for(String runner : paricipant2) maraton.put(runner, maraton.getOrDefault(runner, 0)+1);
-//		
-//		for(String runner : completion) maraton.put(runner, maraton.get(runner)-1);
-//		for(String runner : completion1) maraton.put(runner, maraton.get(runner)-1);
-//		for(String runner : completion2) maraton.put(runner, maraton.get(runner)-1);
-//		
-//		for(String key : maraton.keySet()) {
-//			if(maraton.get(key)!=0) {
-//				System.out.println(key);
-//			}
-//		}
+		HashMap<String,Integer> maraton = new HashMap<>();
+		for(String runner : paricipant) maraton.put(runner, maraton.getOrDefault(runner, 0)+1);
+		for(String runner : paricipant1) maraton.put(runner, maraton.getOrDefault(runner, 0)+1);
+		for(String runner : paricipant2) maraton.put(runner, maraton.getOrDefault(runner, 0)+1);
+		
+		for(String runner : completion) maraton.put(runner, maraton.get(runner)-1);
+		for(String runner : completion1) maraton.put(runner, maraton.get(runner)-1);
+		for(String runner : completion2) maraton.put(runner, maraton.get(runner)-1);
+		
+		for(String key : maraton.keySet()) {
+			if(maraton.get(key)!=0) {
+				System.out.println(key);
+			}
+		}
 //		
 
 //		Set<String>compSet = new HashSet<String>();
