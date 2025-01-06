@@ -16,27 +16,27 @@ import java.io.IOException;
 
 public class ApiExplorer {
 	public static void main(String[] args) {
-		List<ArplInfo> arplList = null;
-		try {
-			arplList = ArplApiService.forecastDustArplInfoList("2024-12-11");
-
-			for (ArplInfo info : arplList) {
-				System.out.println(info.toString());
-			}
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+//		List<ArplInfo> arplList = null;
+//		try {
+//			arplList = ArplApiService.forecastDustArplInfoList("2024-12-11");
+//
+//			for (ArplInfo info : arplList) {
+//				System.out.println(info.toString());
+//			}
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
 		
 //		ArplInfo 객체 -> db 저장
 
-		ArplDAO arplDAO = new ArplDAO();
-		int count = 0;
-		
-		for(ArplInfo ai : arplList) {
-			count += arplDAO.saveArplInfo(ai);
-		}
-		System.out.println(count + "개 저장성공");
-		
+//		ArplDAO arplDAO = new ArplDAO();
+//		int count = 0;
+//		
+//		for(ArplInfo ai : arplList) {
+//			count += arplDAO.saveArplInfo(ai);
+//		}
+//		System.out.println(count + "개 저장성공");
+//		
 		//api -> 데이터 확보 -> 저장
 		//누적해서 데이터를 계속 저장/활용
 		// 1)기존 데이터 delete -> 새로 insert
