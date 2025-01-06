@@ -12,6 +12,11 @@ public class ArplInfo {
 	    informGrade VARCHAR2(1024),
 	    imageUrl1 VARCHAR2(1024)
 		);
+		
+		CREATE SEQUENCE arplInfo_pk_seq
+		start with 1
+		increment by 1
+		nocycle;
 	 */
 	int arplNo; //PK 역할 순번
 	
@@ -41,7 +46,7 @@ public class ArplInfo {
 	public void setActionKnack(String actionKnack) {
 		this.actionKnack = actionKnack;
 	}
-	public String getFinformCaus() {
+	public String getinformCause() {
 		return informCause;
 	}
 	public void setinformCause(String informCause) {
