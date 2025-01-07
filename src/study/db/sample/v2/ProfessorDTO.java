@@ -30,7 +30,7 @@ public class ProfessorDTO {
 	public void setHiredate(LocalDateTime hiredate) {
 		this.hiredate = hiredate;
 	}
-	*/
+	
 	
 	/*
 	LocalDate hiredate;

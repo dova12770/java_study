@@ -14,7 +14,6 @@ public class Concept {
 		// 외부 공공데이터 포탈 API 서버 <-> ApiService <-> Main <-> DAO <-> DB
 		
 		//										(DTO)		(DTO)
-
 		goGetDonMan();
 	}
 	
