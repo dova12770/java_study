@@ -18,6 +18,37 @@ public class StudentDTO {
 	int deptno2;
 	int profno;
 	
+	public StudentDTO(int studno, String name, String id, int grade, String jumin, LocalDate birthday, String tel,
+			int height, int weight, int deptno1, int deptno2, int profno) {
+		super();
+		this.studno = studno;
+		this.name = name;
+		this.id = id;
+		this.grade = grade;
+		this.jumin = jumin;
+		this.birthday = birthday;
+		this.tel = tel;
+		this.height = height;
+		this.weight = weight;
+		this.deptno1 = deptno1;
+		this.deptno2 = deptno2;
+		this.profno = profno;
+	}
+	public StudentDTO() {
+		super();
+		this.studno = studno;
+		this.name = name;
+		this.id = id;
+		this.grade = grade;
+		this.jumin = jumin;
+		this.birthday = birthday;
+		this.tel = tel;
+		this.height = height;
+		this.weight = weight;
+		this.deptno1 = deptno1;
+		this.deptno2 = deptno2;
+		this.profno = profno;
+	}
 	public int getStudno() {
 		return studno;
 	}

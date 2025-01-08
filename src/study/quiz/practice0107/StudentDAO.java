@@ -67,6 +67,7 @@ public List<StudentDTO> findStudent(){
 		try {
 		psmt = conn.prepareStatement(sqlQuery);
 		
+		
 		psmt.setInt(1, grade);
 		
 		rs = psmt.executeQuery();
@@ -97,5 +98,39 @@ public List<StudentDTO> findStudent(){
 		}
 		
 		return studentList2;
+	}
+	
+	public  int saveStudent(StudentDTO student) {
+		conn=DBConnectionManager.connectDB();
+		
+		int result =0;
+		
+		String sqlQuery =" insert into student values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+		
+		
+		try {
+			psmt = conn.prepareStatement(sqlQuery);
+			
+			psmt.setInt(1, student.getStudno());
+			psmt.setString(2, student.getName());
+			psmt.setString(3, student.getId());
+			psmt.setInt(4, student.getGrade());
+			psmt.setString(5, student.getJumin());
+			psmt.setDate(6, java.sql.Date.valueOf(student.getBirthday()));
+			psmt.setString(7, student.getTel());
+			psmt.setInt(8, student.getHeight());
+			psmt.setInt(9, student.getWeight());
+			psmt.setInt(10, student.getDeptno1());
+			psmt.setInt(11, student.getDeptno2());
+			psmt.setInt(12, student.getProfno());
+			
+			result = psmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			DBConnectionManager.disconnectDB(conn, psmt, rs);
+		}
+
+		return result;
 	}
 }
